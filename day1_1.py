@@ -35,7 +35,7 @@ def health_check():
 
 @app.route("hello-world", methods=["GET"])
 def hello_world():
-    return {"messsage":"Hello world"}
+    return {"messsage":"Hello world, how are you"}
 
 
 
