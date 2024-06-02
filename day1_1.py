@@ -33,5 +33,11 @@ def sign_in():
 def health_check():
     return {"message":"app is ok"}
 
+@app.route("hello-world", methods=["GET"])
+def hello_world():
+    return {"messsage":"Hello world"}
+
+
+
 if __name__ == "__main__":
     app.run(port=8080)
