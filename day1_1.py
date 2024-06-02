@@ -21,16 +21,17 @@ def addition():
 
 @app.route("/signin",methods=["GET"])
 def sign_in():
-    fname = str(request.args.get("firstname"))
-    lname = str(request.args.get("lastname"))
-    gmailid = str(request.args.get("gmailid"))
+    fname = request.args.get("firstname")
+    lname = request.args.get("lastname")
+    gmailid = request.args.get("gmailid")
 
     passwa=random.randint(100000,999999)
 
     return {"firstname":fname,"lastname":lname,"gmailid":gmailid,"passward":passwa}
 
-
-
+@app.route("/health")
+def health_check():
+    return {"message":"app is ok"}
 
 if __name__ == "__main__":
     app.run(port=8080)
