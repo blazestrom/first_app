@@ -7,7 +7,7 @@ a = 5
 def multi(a,b):
     return a*b
 
-print(sum(6,9))
+print(sum(6,7))
 
 # if __name__=="__main__":
 #     print(sum(5,6))
